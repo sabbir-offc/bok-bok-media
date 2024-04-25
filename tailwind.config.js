@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'signUpBG': "url('/public/images/logo.png')",
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
