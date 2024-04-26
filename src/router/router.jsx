@@ -3,7 +3,6 @@ import Root from "../Layouts/Root";
 import SignUp from "../pages/Auth/SignUp";
 import SignIn from "../pages/Auth/SignIn";
 import Home from "../pages/Home/Home";
-import auth from "../../firebase.config";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -11,13 +10,18 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: auth.currentUser ? <Home /> : <SignIn />,
+        element: <Home />,
       },
       {
         path: "/sign-up",
         element: <SignUp />,
       },
+      {
+        path: "/sign-in",
+        element: <SignIn />,
+      },
     ],
   },
 ]);
+
 export default router;

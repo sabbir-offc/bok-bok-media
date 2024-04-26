@@ -7,8 +7,7 @@ import {
   updateProfile,
   signOut,
 } from "firebase/auth";
-import auth from "../../firebase.config";
-
+import auth from "../config/firebase.config";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
@@ -68,6 +67,7 @@ const AuthProvider = ({ children }) => {
     loading,
     updateUserInfo,
   };
+  console.log(user)
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
